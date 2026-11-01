@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>&Eacute;clair Caf&eacute; &amp; Bakery| Lindsay Sosa, 2026</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+	<style>
+		*{
+			box-sizing: border-box;
+			
+		}
+		Body{
+			margin: 0;
+			background-color: #F7EDE2;
+			font-family: 'lato',sans-serif;
+			color: #4A281F;
+		}
+		wrapper{
+			display: block;
+			max-width: 430px;
+			margin: 20px auto;
+			background-color: #F7EDE2;
+			padding: 0px 20px 25px;
+			border: 2px solid #D6B17A;
+			border-radius: 24px;
+			box-shadow: 0 4px 15px rgba(74,40,31,0,12);
+		}
+		header{
+			position: relative;
+			text-align: center;
+			padding: 0 15px 0;
+			overflow: hidden;
+			min-height: 0px;
+		}
+		.top-pattern{
+			display: block;
+			width: calc(100% + 30px);
+			height: 105px;
+			object-fit:fill;
+			margin: -35px -15px 0px;
+			
+		}
+		.eiffel{
+			position: absolute;
+			width: 350px;
+			height: auto;
+			top: 65px;
+			right: -25px;
+			opacity: 0.58;
+			z-index: 0;
+		}
+		.brand{
+			position: relative;
+			z-index: 2;
+			margin-top: -5px;
+		}
+		.brand h1{
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 76px;
+			letter-spacing: 5px;
+			color: #4A211B;
+			margin: 0;
+		}
+		.brand-subtitle{
+			font-size: 23px;
+			letter-spacing: 7px;
+			margin: 0;
+			color: #4A211B;
+			
+		}
+		.bow{
+			position: relative;
+			z-index: 2;
+			display: block;
+			width: 135px;
+			height: auto;
+			margin: 5px auto 0;
+			transform: translateX(-15px);
+		}
+		.tagline{
+			position: relative;
+			z-index: 2;
+			font-family: 'Caveat',cursive;
+			font-size: 30px;
+			font-weight:normal;
+			font-style:normal;
+			letter-spacing: 0px;
+			line-height: 1.5;
+			color: #4A281F;
+			margin: 8px auto 12px;
+			white-space:normal;
+			text-align: center;
+			transform: translateX(-10px);
+		}
+	
+		.divider{
+			margin-bottom: 0px;
+			
+		}
+		.divider span{
+			display: inline-block;
+	
+        }
+		.divider span::before,
+        .divider span::after {
+           content: "";
+           display: inline-block;
+           width: 45px;
+           height: 1px;
+           background-color: #D6B17A;
+           vertical-align: middle;
+           margin: 0 10px;
+        }
+		
+		main{
+			text-align: center;
+		}
+		main > img{
+			width: 100%;
+			height:auto;
+			max-width: 100%;
+			display: block;
+			margin: 20px auto;
+		}
+		#signature img{
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 20px auto;
+		}
+		main p{
+			font-size: 16px;
+			line-height: 1.6;
+		}
+		main h2{
+			font-family: 'Cormorant Garamond', Georgia;
+			font-size: 28px;
+			font-weight: 500;
+			margin: 25px 0 15px;
+		}
+		main h2#menu{
+			margin-top: 12px;
+		}
+		main ul{
+			list-style: none;
+			padding: 0;
+			margin: 20px 0;
+		}
+		main li{
+			align-content: center;
+			display:grid;
+			grid-template-columns: 120px 1fr;
+			grid-template-rows:min-content min-content;
+			grid-row-gap: 0px;
+			align-items: center;
+			column-gap: 15px;
+			margin: 20px 0;
+			padding: 14px;
+			text-align:left;
+			background-color: #FBF6F0;
+			border: 1px solid #E8D5C8;
+			border-radius: 16px;
+			box-shadow: 0 3px 10px rgba(74,40,31,0.06)
+		}
+		main li img{
+			grid-column: 1;
+			grid-row: 1 / 3;
+			width: 120px;
+			height: 120px;
+			object-fit: cover;
+			border-radius: 12px;
+		}
+		main li h3{
+			font-size: 18px;
+			margin: 0 0 8px;
+		}
+		main li p{
+			font-size: 15px;
+			margin: 0;
+			transform: translateY(-20px);
+		}
+		a{
+			color: #A87945;
+			font-weight: bold;
+			text-decoration: none;
+		}
+		.menu-button{
+			display: inline-block;
+			background-color: #D9A0A5;
+			color: #4A281F;
+			padding: 12px 25px;
+			border-radius: 8px;
+			font-size: 14px;
+			letter-spacing: 2px;
+			margin: 8px auto 20px;
+			text-decoration: none;
+		}
+		a:hover{
+			color: #C98791;
+			text-decoration: underline;
+		}
+		#location{
+			text-align: center;
+			padding: 20px 15px;
+			margin: 30px 0 15px;
+			background-color: #FBF6F0;
+			border: 1px solid #E8D5C8;
+			border-radius: 16px;
+		}
+		#location h2{
+			font-family: 'Cormorant Garamond',Georgia;
+			font-size: 28px;
+			color: 4A28IF;
+		}
+		#location p{
+			font-size: 15px;
+			line-height: 1.8;
+			margin: 5px 0;
+		}
+		h1,h2,h3{
+			font-family: 'cormorant Garamond', serif;
+		}
+		main h2:first-child{
+			margin-top: 10px;
+			color: #79594E;
+			font-weight: 500;
+		}
+		.location-button{
+			display: inline-block;
+            background-color: #D9A0A5;
+            color: #4A281F;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin: 15px auto 5px;
+		}
+		.location-button:hover{
+			background-color: #C98791;
+            color: #FFFFFF;
+		}
+		footer {
+            padding: 20px 10px;
+            text-align: center;
+            color: #6B5148;
+        }
+		footer p:first-child {
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+		footer p:last-child {
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+		
+	
+	
+	</style>
+</head>
+	
+
+<body>
+	<wrapper>
+		<header>
+			<img class="top-pattern" src="top-pattern.png" alt="">
+			<img class="eiffel" src="Eiffeltower.png.png" alt="">
+			<div class="brand">
+				<h1>Éclair</h1>
+				<p class="brand-subtitle">Café &amp; Bakery</p>
+			</div>
+			<img src="pink-bow.png" class="bow" alt="">
+			<p class="tagline">A Little Taste of Paris</p>
+			<div class="divider">
+				<span>⚜</span>
+			</div>
+			</header>
+			<main>
+				<section id="signature">
+				<img src="eclair.png.png"/>
+				<h2> Our Signature &Eacute;clair </h2>
+				<p> Delicate pastry, silky chocolate cream, 
+					and touch of Paris in every bite.</p>
+					</section>
+				<a href="#menu" class="menu-button">
+					EXPLORE OUR MENU
+				</a>
+				<h2 id="menu">Our Pastries</h2>
+				<ul>
+					<li>
+						<img src="chocolate.png.png" alt="Chocolate Eclair"/>
+						<h3>Classic Chocolate &Eacute;clair</h3>
+						<p>Chocolate cream and delicate pastry - $6.50</p>
+						</li>
+					<li>
+						<img src="Vanilla-eclair.png.png" alt="Vanilla Eclair"/>
+						<h3>Vanilla &Eacute;clair</h3>
+						<p>Smooth vanilla cream - $6.00</p>
+					</li>
+					<li>
+						<img src="french-macarons.png.png" alt="French macarons"/>
+						<h3>French Macarons</h3>
+						<p>Delicade almond cookies - $3.00</p>
+					</li>
+				</ul>
+				<section id="location">
+				<h2>Location &amp; Hours</h2>
+				<p>123 Boulevard Saint-Germain<br>
+				   Paris, France </p>
+				<p>Monday-Saturday: 8AM-6PM</p>
+				<p>Sunday: 9AM-4PM</p>
+				<a href="https://www.google.com/maps/search/?api=1&query=123+Boulevard+Saint-Germain+Paris+France" class="location-button" target="_blank">
+                 GET DIRECTIONS</a>
+                        	
+				</section>
+							
+				</main>
+				
+				<footer>
+		             <p>&copy; 2026, Lindsay Sosa.</p>
+		<p>This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+				
+				</footer>
+			
+			
+		
+		
+	
+	</wrapper>
+</body>
+</html>
